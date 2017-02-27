@@ -42,7 +42,7 @@ public class HomePage extends Page {
 	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/mobile-developers')]")   //-------------
 	private WebElement mobileDevelopersButton;
 	
-	@FindBy(how = How.XPATH, using = "//ul[@class='__list list-unstyled clearfix m-b-80']/li[3]")
+	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/designers')]")
 	private WebElement designersandCreativesButton;
 	
 	@FindBy(how = How.XPATH, using = "//ul[@class='__list list-unstyled clearfix m-b-80']/li[4]")
