@@ -1,6 +1,5 @@
 package framework.pages.navigation;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -17,8 +16,8 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class Navigation extends Page {
 
-	public Navigation(WebDriver webDriver) {
-		  super(webDriver);
+	public Navigation() {
+		  super();
 		 }
 	
 	//TODO FindBy for all elements

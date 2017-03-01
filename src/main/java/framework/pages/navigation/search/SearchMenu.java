@@ -1,6 +1,5 @@
 package framework.pages.navigation.search;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -12,8 +11,8 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class SearchMenu extends Page{
 
-	public SearchMenu(WebDriver webDriver) {
-		super(webDriver);
+	public SearchMenu() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 	

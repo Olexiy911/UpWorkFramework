@@ -79,6 +79,10 @@ public class WebDriverFactory {
 		
 		return eventDriver;
 	}
+	
+	public static WebDriver getDriver(){
+		return eventDriver;
+	}
 
 	public static WebDriver getSetDriver() {
 		if (eventDriver == null) {

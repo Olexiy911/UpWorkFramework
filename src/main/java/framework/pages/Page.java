@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 
 import framework.utility.LogFactory;
+import framework.webdriver.WebDriverFactory;
 
 /*
  * Abstract class representation of a Page in the UI with additional features. Page object pattern
@@ -21,8 +22,8 @@ public abstract class Page {
 	 * @param webDriver
 	 */
 	
-	public Page(WebDriver webDriver) {
-		this.webDriver = webDriver;
+	public Page() {
+		this.webDriver = WebDriverFactory.getDriver();
 	}
 
 	public WebDriver getWebDriver() {

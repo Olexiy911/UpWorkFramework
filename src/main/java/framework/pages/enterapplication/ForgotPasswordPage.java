@@ -1,6 +1,5 @@
 package framework.pages.enterapplication;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -19,14 +18,14 @@ public class ForgotPasswordPage extends Page{
 	private WebElement forgotPasswordPageTitle;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id='email']")
-	private WebElement codeShown;
+	private WebElement emailAddress;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id='submit']")
 	private WebElement retrievePasswordButton;
 	
 	
-	public ForgotPasswordPage(WebDriver webDriver) {
-		super(webDriver);
+	public ForgotPasswordPage() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -43,13 +42,12 @@ public class ForgotPasswordPage extends Page{
 		return forgotPasswordPageTitle.isDisplayed();
 	}
 	
-	//????????????????
-	@Step("Set user name")
-	public ForgotPasswordPage setCodeShown(User user){
-		//codeShown.sendKeys(user.getName());
+	
+	@Step("Set user name")								//<-----------------------------
+	public ForgotPasswordPage setEmail(User email){
+		emailAddress.sendKeys(email.getEmail());
 		return this;
 	}
-	
 	
 	@Step("Click on Retrieve Password")
 	public ForgotPasswordPage clickRetrievePassword(){

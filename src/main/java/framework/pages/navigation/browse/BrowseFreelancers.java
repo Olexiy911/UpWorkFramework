@@ -1,6 +1,5 @@
 package framework.pages.navigation.browse;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -14,8 +13,8 @@ import framework.pages.enterapplication.WebMobileSoftwareDevPage;
 
 public class BrowseFreelancers extends Page{
 
-	public BrowseFreelancers(WebDriver webDriver) {
-		super(webDriver);
+	public BrowseFreelancers() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 

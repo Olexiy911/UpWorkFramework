@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PageObjectExampleTest" verbose="5" >
+	<parameter name="browserName" value="firefox"/>		
+	<test name="TestLQAS">
+		<classes>
+		  <class name="pageobject.hometests.HomePageTestSuite"/>
+		  <class name="pageobject.signupstudenttests.SignUpStudentPageTestSuite"/>
+		  <class name="pageobject.menuhometests.ContactHomeMenuTestSuite"/>
+		  <class name="pageobject.menuhometests.SchoolHomeMenuTestSuite"/>
+		</classes>
+	</test>	  
+</suite>

@@ -1,6 +1,5 @@
 package framework.pages.enterapplication;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -11,25 +10,25 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class SignUpPage extends Page {
 	
-	@FindBy(how = How.XPATH, using = "//*[@class='col-md-5'][2]/a")
+	@FindBy(how = How.XPATH, using = "//a[contains(@href,'/login')]")
 	private WebElement loginButton;
 	
 	
 	
-	@FindBy(how = How.XPATH, using = "//h1[1][@class='m-xs-top-bottom']")
+	@FindBy(how = How.XPATH, using = "//hgroup[@class='text-center']")
 	private WebElement signUpPageTitle;
 	
 	
 	
-	@FindBy(how = How.XPATH, using = "//*[@class='col-md-5'][1]/a")
+	@FindBy(how = How.XPATH, using = "//a[contains(@href,'/employer')]")
 	private WebElement hirePageButton;
 	
-	@FindBy(how = How.XPATH, using = "//*[@class='col-md-5'][2]/a")
+	@FindBy(how = How.XPATH, using = "//a[contains(@href,'/contractor')]")
 	private WebElement workPageButton;
 	
 	
-	public SignUpPage(WebDriver webDriver) {
-		  super(webDriver);
+	public SignUpPage() {
+		  super();
 		 }
 	
 	

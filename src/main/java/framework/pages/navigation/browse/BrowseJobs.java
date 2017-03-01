@@ -1,13 +1,11 @@
 package framework.pages.navigation.browse;
 
-import org.openqa.selenium.WebDriver;
-
 import framework.pages.Page;
 
 public class BrowseJobs extends Page {
 
-	public BrowseJobs(WebDriver webDriver) {
-		super(webDriver);
+	public BrowseJobs() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 

@@ -1,13 +1,11 @@
 package framework.pages.navigation.browse;
 
-import org.openqa.selenium.WebDriver;
-
 import framework.pages.Page;
 
 public class TrendingSkills extends Page {
 
-	public TrendingSkills(WebDriver webDriver) {
-		super(webDriver);
+	public TrendingSkills() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 

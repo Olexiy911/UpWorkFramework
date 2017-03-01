@@ -1,7 +1,6 @@
 package framework.pages.home;
 
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -39,25 +38,25 @@ public class HomePage extends Page {
 	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/developers')]")
 	private WebElement webDevelopersButton;
 
-	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/mobile-developers')]")   //-------------
+	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/mobile-developers')]")
 	private WebElement mobileDevelopersButton;
 	
 	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/designers')]")
 	private WebElement designersandCreativesButton;
 	
-	@FindBy(how = How.XPATH, using = "//ul[@class='__list list-unstyled clearfix m-b-80']/li[4]")
+	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/writing')]")
 	private WebElement writersButton;
 	
-	@FindBy(how = How.XPATH, using = "//ul[@class='__list list-unstyled clearfix m-b-80']/li[5]")
+	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/administrative-support')]")
 	private WebElement virtualAssistantsButton;
 	
-	@FindBy(how = How.XPATH, using = "//ul[@class='__list list-unstyled clearfix m-b-80']/li[6]")
+	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/customer-service')]")
 	private WebElement customerServiceAgentsButton;
 	
-	@FindBy(how = How.XPATH, using = "//ul[@class='__list list-unstyled clearfix m-b-80']/li[7]")
+	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/sales-marketing')]")
 	private WebElement salesMarketingExpertsButton;
 	
-	@FindBy(how = How.XPATH, using = "//ul[@class='__list list-unstyled clearfix m-b-80']/li[8]")
+	@FindBy(how = How.XPATH, using = "//main//a[contains(@href,'/accounting-consulting')]")
 	private WebElement accountantsConsultantsButton;
 	
 	
@@ -65,8 +64,8 @@ public class HomePage extends Page {
 	private WebElement seeAllCategoriesButton;
 	
 	
-	public HomePage(WebDriver webDriver) {
-		super(webDriver);
+	public HomePage() {
+		super();
 	}
 	
 	

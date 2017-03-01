@@ -1,6 +1,5 @@
 package framework.pages.enterapplication;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -13,7 +12,7 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class LoginPage extends Page {
 	
-	@FindBy(how = How.XPATH, using = "//h1[1]") //-----------
+	@FindBy(how = How.XPATH, using = "//h1[1]")
 	private WebElement loginPageTitle;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id='login_username']")
@@ -28,20 +27,17 @@ public class LoginPage extends Page {
 	@FindBy(how = How.XPATH, using = "//*[@class='checkbox-replacement-helper']")
 	private WebElement rememberCheckBox;
 	
-	//input[@type='text'][following-sibling::*//*[contains(text(), '')]]
-	//div[1]/div[contains(@class,'visible')]/*[@class='input-group']
-	//div[contains(@class,'input-group')]/*[@class='dropdown']
 
 	@FindBy(how = How.XPATH, using = "//a[text()='Sign up']")
 	private WebElement signUpButton;
 	
 	
-	@FindBy(how = How.XPATH, using = "//div[contains(@class,'hidden')]/a[text()='Forgot password?']")///---------------------------
+	@FindBy(how = How.XPATH, using = "//div[contains(@class,'hidden')]/a[text()='Forgot password?']")
 	private WebElement forgotPassword;
 	
 	
-	public LoginPage(WebDriver webDriver) {
-		  super(webDriver);
+	public LoginPage() {
+		  super();
 		 }
 	
 	

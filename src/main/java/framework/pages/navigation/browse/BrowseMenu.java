@@ -1,6 +1,5 @@
 package framework.pages.navigation.browse;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -10,24 +9,24 @@ import framework.pages.Page;
 
 public class BrowseMenu extends Page{
 
-	public BrowseMenu(WebDriver webDriver) {
-		super(webDriver);
+	public BrowseMenu() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[1][contains(@class,'tile')]//a[@class='tile-title font-gotham-bold ng-scope']")   
 	private WebElement browseCategoriesButton;
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[2][contains(@class,'tile')]//a[@class='tile-title font-gotham-bold ng-scope']")   
 	private WebElement browseFreelancersButton;
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[3][contains(@class,'tile')]//a[@class='tile-title font-gotham-bold ng-scope']")   
 	private WebElement browseJobsButton;
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[4][contains(@class,'tile')]//a[@class='tile-title font-gotham-bold ng-scope']")   
 	private WebElement trendingSkillsButton;
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//a[contains(@href,'/hiring')]")   
 	private WebElement browseHiringResourcesButton;
 
 	
