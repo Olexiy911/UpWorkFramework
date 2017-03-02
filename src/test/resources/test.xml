@@ -4,10 +4,7 @@
 	<parameter name="browserName" value="chrome"/>		
 	<test name="TestLQAS">
 		<classes>
-		  <class name="framework.menuhometests.ContactHomeMenuTestSuite"/>
-		  <class name="framework.hometests.HomePageTestSuite"/>
-		  <class name="framework.signupstudenttests.SignUpStudentPageTestSuite"/>
-		  <class name="framework.menuhometests.SchoolHomeMenuTestSuite"/>
-		</classes>
+		  <class name="login.LoginTest"/>
+		 </classes>
 	</test>	  
 </suite>

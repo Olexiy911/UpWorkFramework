@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import enteties.User;
 import framework.pages.Page;
 import framework.pages.home.HomePage;
+import framework.pages.home.UserHomePage;
 import ru.yandex.qatools.allure.annotations.Step;
 
 public class LoginPage extends Page {
@@ -36,10 +37,6 @@ public class LoginPage extends Page {
 	private WebElement forgotPassword;
 	
 	
-	public LoginPage() {
-		  super();
-		 }
-	
 	
 	@Step("Is Login Page opened")
 	public boolean isLoginPage(){
@@ -59,9 +56,9 @@ public class LoginPage extends Page {
 	}
 	
 	@Step("Click on Login Button")
-	public HomePage clickLogin(){
+	public UserHomePage clickLogin(){
 		loginButton.click();
-		return PageFactory.initElements(webDriver, HomePage.class);
+		return PageFactory.initElements(webDriver, UserHomePage.class);
 	}
 	
 	

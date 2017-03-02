@@ -18,11 +18,6 @@ import framework.pages.enterapplication.WritersPage;
 
 public class BrowseCategories extends Page{
 
-	public BrowseCategories() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 	@FindBy(how = How.XPATH, using = "")   
 	private WebElement webDevelopersButton;
 	

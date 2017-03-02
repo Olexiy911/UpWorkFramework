@@ -16,9 +16,6 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class Navigation extends Page {
 
-	public Navigation() {
-		  super();
-		 }
 	
 	//TODO FindBy for all elements
 	
@@ -42,6 +39,10 @@ public class Navigation extends Page {
 	@FindBy(how = How.XPATH, using = "//a[text()='Become a Freelancer']")   
 	private WebElement becomeFreelancerButton;
 	
+	
+	public Navigation (){
+		PageFactory.initElements(webDriver, Navigation.class);
+	}
 	
 	
 	@Step("Click on UpWork Button")

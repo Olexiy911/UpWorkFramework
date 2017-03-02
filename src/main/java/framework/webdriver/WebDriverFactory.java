@@ -72,7 +72,7 @@ public class WebDriverFactory {
 			eventDriver.register(new WebDriverListener());
 			
 			eventDriver.manage().timeouts().implicitlyWait(Integer.
-					valueOf(PropertyLoader.getUrl()), TimeUnit.SECONDS);
+					valueOf(PropertyLoader.getTimeout()), TimeUnit.SECONDS);
 			
 			eventDriver.manage().window().maximize();
 		}

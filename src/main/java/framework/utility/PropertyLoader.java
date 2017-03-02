@@ -8,7 +8,7 @@ import org.apache.commons.configuration.PropertiesConfiguration;
  */
 public class PropertyLoader {
 	
-	private static String path = "config.properties";
+	private static String path = "env.properties";
     
 	  private static String getProperty(String property) {
 	      
@@ -28,6 +28,10 @@ public class PropertyLoader {
 	  
 	  public static String getTimeout(){
 		  return getProperty("implicit.timeout");
+	  }
+	  
+	  public static String getSurName(){
+		  return getProperty("user.sur_name");
 	  }
 	  
 	  public static String getName(){

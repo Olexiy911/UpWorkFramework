@@ -1,6 +1,7 @@
 package enteties;
 
 public class User {
+		private String sur_name;
 	    private String name;
 	    private String email;
 	    private String password;
@@ -9,6 +10,11 @@ public class User {
 
 	    public static User get() {
 	        return new User();
+	    }
+	    
+	    public User setSurName(String sur_name){
+	    	this.sur_name = sur_name;
+	    	return this;
 	    }
 
 	    public User setName(String name) {
@@ -32,6 +38,10 @@ public class User {
 
 	    // - - - - - - - - - -
 
+	    public String getSurName() {
+	    	return sur_name;
+	    }
+	    
 	    public String getName() {
 	        return name;
 	    }
