@@ -18,7 +18,7 @@ import framework.pages.enterapplication.WritersPage;
 
 public class BrowseCategories extends Page{
 
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[@class='tile active']//a[contains(@href,'/developers')]")   
 	private WebElement webDevelopersButton;
 	
 	@FindBy(how = How.XPATH, using = "")   

@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import enteties.User;
 import framework.pages.Page;
-import framework.pages.home.HomePage;
 import framework.pages.home.UserHomePage;
+import framework.pages.signup.SignUpPage;
 import ru.yandex.qatools.allure.annotations.Step;
 
 public class LoginPage extends Page {

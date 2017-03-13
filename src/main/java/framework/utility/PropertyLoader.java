@@ -30,8 +30,8 @@ public class PropertyLoader {
 		  return getProperty("implicit.timeout");
 	  }
 	  
-	  public static String getSurName(){
-		  return getProperty("user.sur_name");
+	  public static String getSurname(){
+		  return getProperty("user.surname");
 	  }
 	  
 	  public static String getName(){
@@ -44,6 +44,10 @@ public class PropertyLoader {
 	  
 	  public static String getEmail(){
 		  return getProperty("user.email");
+	  }
+	  
+	  public static String getInvalidSurname(){
+		  return getProperty("invalid.user.surname");
 	  }
 	  
 	  public static String getInvalidName(){

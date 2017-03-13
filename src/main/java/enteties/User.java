@@ -1,7 +1,7 @@
 package enteties;
 
 public class User {
-		private String sur_name;
+		private String surname;
 	    private String name;
 	    private String email;
 	    private String password;
@@ -12,8 +12,8 @@ public class User {
 	        return new User();
 	    }
 	    
-	    public User setSurName(String sur_name){
-	    	this.sur_name = sur_name;
+	    public User setSurname(String surname){
+	    	this.surname = surname;
 	    	return this;
 	    }
 
@@ -38,8 +38,8 @@ public class User {
 
 	    // - - - - - - - - - -
 
-	    public String getSurName() {
-	    	return sur_name;
+	    public String getSurname() {
+	    	return surname;
 	    }
 	    
 	    public String getName() {
@@ -53,4 +53,20 @@ public class User {
 	    public String getPassword() {
 	        return password;
 	    }
+
+		public String getInvalidSurname() {
+			return surname;
+		}
+		
+		public String getInvalidName() {
+			return surname;
+		}
+		
+		public String getInvalidEmail() {
+			return surname;
+		}
+		
+		public String getInvalidPassword() {
+			return surname;
+		}
 }

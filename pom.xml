@@ -19,13 +19,13 @@
 		<java.compiler.version>1.8</java.compiler.version>
 		<surefire.plugin.version>2.19.1</surefire.plugin.version>
 		
+		
 		<!--Allure properties -->
-		<aspectj.version>1.8.5</aspectj.version>
-		<allure.version>1.5.0.RC2</allure.version>
+  		<aspectj.version>1.8.9</aspectj.version>
+		<allure.version>1.4.24.RC2</allure.version>
 		<allure.plugin.version>2.5</allure.plugin.version>
 		
-		<allure.xml.dir>xml-test-report</allure.xml.dir>
-		<allure.results.directory>${project.build.directory}/${allure.xml.dir}</allure.results.directory>
+		
 	</properties>
 
 	<dependencies>
@@ -76,6 +76,12 @@
 			<artifactId>commons-configuration</artifactId>
 			<version>1.6</version>
 		</dependency>
+		<dependency>
+		      <groupId>commons-beanutils</groupId>
+		      <artifactId>commons-beanutils</artifactId>
+		      <version>1.9.2</version>
+		      <scope>test</scope>
+ 		 </dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -93,10 +99,10 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${surefire.plugin.version}</version>
 					<configuration>
-						<!-- 
+						 
 						<forkCount>1</forkCount>
 						<reuseForks>true</reuseForks>
-						 -->
+						
 						<suiteXmlFiles>
 							<suiteXmlFile>src/test/resources/${suite.name}</suiteXmlFile>
 						</suiteXmlFiles>
@@ -110,16 +116,11 @@
 							<property>
 								<name>listener</name>
 								<value>
-									framework.utility.TestExecutionListener
+									listeners.CustomListeners, listeners.ReportGeneratorListeners
 								</value>
 							</property>
 						</properties>
-						<systemProperties>
-							<property>
-								<name>allure.results.directory</name>
-								<value>${allure.results.directory}</value>
-							</property>
-						</systemProperties>
+						<testFailureIgnore>true</testFailureIgnore>
 					</configuration>
 					<dependencies>
 						<dependency>
@@ -136,14 +137,17 @@
 		<excludeDefaults>true</excludeDefaults>
 		<plugins>
 			<plugin>
-				<groupId>ru.yandex.qatools.allure</groupId>
-				<artifactId>allure-maven-plugin</artifactId>
-				<version>${allure.plugin.version}</version>
-				<configuration>
-					<resultsDirectory>${allure.xml.dir}</resultsDirectory> 
-					<reportDirectory>${project.build.directory}/graph-test-report</reportDirectory>
-				</configuration>
-			</plugin>
+                <groupId>ru.yandex.qatools.allure</groupId>
+                <artifactId>allure-maven-plugin</artifactId>
+                <version>2.0</version>
+                <configuration>
+                    <resultsPattern>**/allure-results</resultsPattern>
+                    <properties>
+                    
+                	<allure.issues.tracker.pattern>https://www.youtube.com/user/%s</allure.issues.tracker.pattern>
+                	</properties>
+                </configuration>
+            </plugin>
 		</plugins>
 	</reporting>
 	

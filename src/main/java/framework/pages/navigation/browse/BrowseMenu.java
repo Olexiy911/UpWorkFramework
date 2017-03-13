@@ -30,7 +30,6 @@ public class BrowseMenu extends Page{
 	private WebElement browseHiringResourcesButton;
 
 	
-	
 	public BrowseCategories clickBrowseCategories(){
 		browseCategoriesButton.click();
 		return PageFactory.initElements(webDriver, BrowseCategories.class);

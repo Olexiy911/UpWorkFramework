@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [FrameworkTest]">
-  <parameter name="browserName" value="chrome"/>
+  <parameter name="browserName" value="firefox"/>
   <test name="TestLQAS(failed)">
     <classes>
-      <class name="login.LoginTest">
+      <class name="signup.SignUpTest">
         <methods>
           <include name="setup"/>
-          <include name="LoginTest"/>
-          <include name="tearDown"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- login.LoginTest -->
+      </class> <!-- signup.SignUpTest -->
     </classes>
   </test> <!-- TestLQAS(failed) -->
 </suite> <!-- Failed suite [FrameworkTest] -->
