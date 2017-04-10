@@ -12,21 +12,22 @@ import ru.yandex.qatools.allure.annotations.TestCaseId;
 import ru.yandex.qatools.allure.annotations.Title;
 import testbase.TestBase;
 
+
 public class SignUpTest extends TestBase{
-	
+
 	
 	@Test
 	@TestCaseId("100006407850172")
 	@Title("Sign Up Test")
 	public void loginTest() {
-		User invaliduser = new UserRepo().getInValidUser();
+		User seconduser = new UserRepo().getValidSecondUser();
 		SignUpPage page = new Navigation().clickSignUp();
 		//Assert.assertTrue(new SignUpPage().isSignUpPage(), "Is Sign Up Page Displayed");
-		page.clickHire();
+		page.clickHire().clickIndividualSignUp();
 		
-		new CreateHireAccountPage().setName(invaliduser)
-				.setSurname(invaliduser).setEmail(invaliduser).setPassword(invaliduser)
-				.clickPrivacyPolicy().clickGetStarted();
+	/*	new CreateHireAccountPage().setName(seconduser)
+				.setSurname(seconduser).setEmail(seconduser).setPassword(seconduser)
+				.clickPrivacyPolicy().clickGetStarted();*/
 	}
 
 }

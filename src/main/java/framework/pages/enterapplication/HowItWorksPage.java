@@ -12,8 +12,8 @@ import ru.yandex.qatools.allure.annotations.Step;
 public class HowItWorksPage extends Page {
 	
 	public HowItWorksPage() {
-		  super();
-		 }
+		PageFactory.initElements(webDriver, this);
+	}
 
 	@FindBy(how = How.XPATH, using = "//h1[1]")
 	private WebElement howItWorksTitle;

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="FrameworkTest" verbose="5" >
-	<parameter name="browserName" value="firefox"/>		
+<suite name="FrameworkTest" verbose="5">
+	<parameter name="browserName" value="chrome" />
+	<listeners>
+		<listener class-name="listeners.CustomListeners" />
+		<listener class-name="listeners.ReportGeneratorListeners" />
+	</listeners>
 	<test name="TestLQAS">
 		<classes>
-		  <!-- <class name="login.LoginTest"/> -->
-		  <!-- <class name="navigation.NavigationTest"/> -->
-		  <class name="signup.SignUpTest"/>
-		 </classes>
-	</test>	  
+			<class name="navigation.NavigationTest" />
+		<!-- 	<class name="navigation.NavigationTest" />
+			<class name="signup.SignUpTest" /> -->
+		</classes>
+	</test>
 </suite>

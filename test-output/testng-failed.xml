@@ -2,14 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [FrameworkTest]">
   <parameter name="browserName" value="firefox"/>
+  <listeners>
+    <listener class-name="listeners.CustomListeners"/>
+    <listener class-name="listeners.ReportGeneratorListeners"/>
+  </listeners>
   <test name="TestLQAS(failed)">
     <classes>
-      <class name="signup.SignUpTest">
+      <class name="homepage.HomePageTest">
         <methods>
+          <include name="pricingTitleTest"/>
           <include name="setup"/>
-          <include name="loginTest"/>
         </methods>
-      </class> <!-- signup.SignUpTest -->
+      </class> <!-- homepage.HomePageTest -->
     </classes>
   </test> <!-- TestLQAS(failed) -->
 </suite> <!-- Failed suite [FrameworkTest] -->

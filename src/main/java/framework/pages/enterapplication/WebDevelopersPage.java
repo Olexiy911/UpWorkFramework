@@ -11,6 +11,10 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class WebDevelopersPage extends Page{
 
+	public WebDevelopersPage(){
+		PageFactory.initElements(webDriver, this);
+	}	
+	
 	@FindBy(how = How.XPATH, using = "//h1[1]")
 	private WebElement webDevelopersTitle;
 	

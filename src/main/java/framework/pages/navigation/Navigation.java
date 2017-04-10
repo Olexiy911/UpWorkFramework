@@ -15,12 +15,15 @@ import framework.pages.signup.SignUpPage;
 import ru.yandex.qatools.allure.annotations.Step;
 
 public class Navigation extends Page {
-
+	
+	public Navigation (){								//<---------?
+		PageFactory.initElements(webDriver, this);
+	}
 		
 	@FindBy(how = How.XPATH, using = "//img[@alt='Upwork']")
 	private WebElement upWorkButton;
 	
-	@FindBy(how = How.XPATH, using = "//li[contains(@class,'ng-isolate-scope')]/a[@class='text-uppercase active']")   
+	@FindBy(how = How.XPATH, using = "//li[contains(@class,'ng-isolate-scope')]/a[@class='text-uppercase']")   
 	private WebElement browseButton;
 	
 	@FindBy(how = How.XPATH, using = "//a[text()='How it works']")
@@ -35,18 +38,16 @@ public class Navigation extends Page {
 	@FindBy(how = How.XPATH, using = "//a[text()='Become a Freelancer']")   
 	private WebElement becomeFreelancerButton;
 	
-	public Navigation (){
-		PageFactory.initElements(webDriver, this);
-	}
+
 
 	
 	@Step("Click on UpWork Button")
 	public HomePage clickHomePage(){
 		upWorkButton.click();
-		return PageFactory.initElements(webDriver, HomePage.class);//PageFactory ???
+		return PageFactory.initElements(webDriver, HomePage.class);
 	}
 	
-	
+
 	@Step("Click on Browze Menu")
 	public BrowseMenu clickBrowse(){
 		browseButton.click();

@@ -37,6 +37,12 @@ public class LoginPage extends Page {
 	private WebElement forgotPassword;
 	
 	
+	@FindBy(how = How.XPATH, using = "//div[contains(@class,'col-md-6')]//*[text()='Invalid username, email or password']")
+	private WebElement errorInformation;
+	
+	public LoginPage(){
+		PageFactory.initElements(webDriver, this);
+	}
 	
 	@Step("Is Login Page opened")
 	public boolean isLoginPage(){
@@ -73,4 +79,12 @@ public class LoginPage extends Page {
 		forgotPassword.click();
 		return PageFactory.initElements(webDriver, ForgotPasswordPage.class);
 	}
+	
+	
+	@Step("Is Error Information Displayed")
+	public boolean isErrorInformation(){
+		return errorInformation.isDisplayed();
+	}
+	
+	
 }

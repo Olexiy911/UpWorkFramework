@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FrameworkTest" verbose="5">
+	<parameter name="browserName" value="firefox" />
+	<listeners>
+		<listener class-name="listeners.CustomListeners" />
+		<listener class-name="listeners.ReportGeneratorListeners" />
+	</listeners>
+	<test name="TestLQAS">
+		<classes>
+			<class name="homepage.HomePageTest">
+				<methods>
+					<include name="pricingTitleTest" />
+					<!-- <include name="jobsTest" />
+					<include name="testNewBookmarkOrder" />  -->
+				</methods>
+			</class> 
+			<!-- <class name="navigation.NavigationTest">
+				<methods>
+					<include name="browseTest" />
+					<include name="testNewBookmarkAtBottom" />
+					<include name="testNewBookmarkOrder" />
+				</methods>
+			</class> -->
+		</classes>
+	</test>
+</suite>

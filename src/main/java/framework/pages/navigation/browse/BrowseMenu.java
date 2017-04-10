@@ -9,10 +9,6 @@ import framework.pages.Page;
 
 public class BrowseMenu extends Page{
 
-	public BrowseMenu() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	
 	@FindBy(how = How.XPATH, using = "//li[1][contains(@class,'tile')]//a[@class='tile-title font-gotham-bold ng-scope']")   
 	private WebElement browseCategoriesButton;
@@ -29,6 +25,10 @@ public class BrowseMenu extends Page{
 	@FindBy(how = How.XPATH, using = "//a[contains(@href,'/hiring')]")   
 	private WebElement browseHiringResourcesButton;
 
+	
+	public BrowseMenu(){
+		PageFactory.initElements(webDriver, this);
+	}
 	
 	public BrowseCategories clickBrowseCategories(){
 		browseCategoriesButton.click();

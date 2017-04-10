@@ -54,19 +54,4 @@ public class User {
 	        return password;
 	    }
 
-		public String getInvalidSurname() {
-			return surname;
-		}
-		
-		public String getInvalidName() {
-			return surname;
-		}
-		
-		public String getInvalidEmail() {
-			return surname;
-		}
-		
-		public String getInvalidPassword() {
-			return surname;
-		}
 }

@@ -11,7 +11,6 @@ import framework.utility.PropertyLoader;
 import framework.webdriver.WebDriverFactory;
 
 
-
 public class TestBase {
 
 	protected WebDriver webDriver;
@@ -21,11 +20,12 @@ public class TestBase {
 	@BeforeMethod
 	@Parameters({ "browserName" })
 	public void setup(String browserName) throws Exception {
-		webDriver = WebDriverFactory.getInstance(browserName);
+		
+		webDriver = WebDriverFactory.getInstance(browserName);   //"firefox"
 		webDriver.get(PropertyLoader.getUrl());
+		webDriver.manage().window().maximize();
 		homePage = PageFactory.initElements(webDriver, Navigation.class);
 	}
 
-	
 
 }

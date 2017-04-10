@@ -15,39 +15,46 @@ import framework.pages.enterapplication.ViewAllCategoriesPage;
 import framework.pages.enterapplication.VirtualAssistantsPage;
 import framework.pages.enterapplication.WebDevelopersPage;
 import framework.pages.enterapplication.WritersPage;
+import framework.utility.AutomationWait;
 
 public class BrowseCategories extends Page{
 
 	@FindBy(how = How.XPATH, using = "//li[@class='tile active']//a[contains(@href,'/developers')]")   
 	private WebElement webDevelopersButton;
-	
-	@FindBy(how = How.XPATH, using = "")   
+
+	@FindBy(how = How.XPATH, using = "//li[@class='tile active']//a[contains(@href,'/mobile-developers')]")   
 	private WebElement mobileDevelopersButton;
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[@class='tile active']//a[contains(@href,'/designers')]")   
 	private WebElement designersandCreativesButton;
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[@class='tile active']//a[contains(@href,'/writing')]")   
 	private WebElement writersButton;
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[@class='tile active']//a[contains(@href,'/administrative-support')]")   
 	private WebElement virtualAssistantsButton;
 
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[@class='tile active']//a[contains(@href,'/customer-service')]")   
 	private WebElement customerServiceAgentsButton;
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[@class='tile active']//a[contains(@href,'/sales-marketing')]")   
 	private WebElement salesMarketingExpertsButton;
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[@class='tile active']//a[contains(@href,'/accounting-consulting')]")   
 	private WebElement accountantsConsultantsButton;
 	
-	@FindBy(how = How.XPATH, using = "")   
+	@FindBy(how = How.XPATH, using = "//li[@class='tile active']//a[contains(@href,'/freelancer-categories')]")   
 	private WebElement viewAllCategoriesButton;
+	
+	public BrowseCategories(){
+		PageFactory.initElements(webDriver, this);
+	}
+	
 	
 	
 	
 	public WebDevelopersPage clickWebDevelopers(){
+		webDevelopersButton = AutomationWait.waitForElementClickable(5000, webDevelopersButton);
 		webDevelopersButton.click();
 		return PageFactory.initElements(webDriver, WebDevelopersPage.class);
 	}

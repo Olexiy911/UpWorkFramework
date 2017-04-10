@@ -11,12 +11,17 @@ import ru.yandex.qatools.allure.annotations.Step;
 
 public class BecomeFreelancerPage extends Page{
 
-	@FindBy(how = How.XPATH, using = "//span[text()='Create a Free Freelancer Account']")   
+	public BecomeFreelancerPage() {
+		PageFactory.initElements(webDriver, this);
+	}
+	
+	@FindBy(how = How.XPATH, using = "//h1[1]")   
 	private WebElement becomeFreelanserTitle;
 	
-	@FindBy(how = How.XPATH, using = "//a[@class='navbar-brand']")
+	@FindBy(how = How.XPATH, using = "//img[@alt='Upwork']")
 	private WebElement upWorkButton;
 
+	@Step("Is Become Freelancer Page opened")
 	public boolean isBecomeFreelancerPage() {
 		return becomeFreelanserTitle.isDisplayed();
 	}

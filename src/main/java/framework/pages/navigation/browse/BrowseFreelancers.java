@@ -13,10 +13,6 @@ import framework.pages.enterapplication.WebMobileSoftwareDevPage;
 
 public class BrowseFreelancers extends Page{
 
-	public BrowseFreelancers() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
 	@FindBy(how = How.XPATH, using = "")   
 	private WebElement browseCategoriesButton;
